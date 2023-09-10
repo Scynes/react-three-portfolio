@@ -1,9 +1,10 @@
 import { Box, Circle, Flex, Heading, Highlight, Text, VStack } from '@chakra-ui/react';
+import Computer from './Computer';
 
 const Hero = () => {
     return (
-        <Box height={ 'calc(100vh)' } padding={ { base: '7rem 0 0 2rem', md: '9rem 0 0 4rem' } }>
-            <Flex gap={ '1rem' } bgSize={ 'cover' } bgPosition={ 'center' } bgRepeat={ 'no-repeat' }>
+        <Box height={ 'calc(100vh)' } position={ 'relative' }>
+            <Flex gap={ '1rem' } bgSize={ 'cover' } bgPosition={ 'center' } bgRepeat={ 'no-repeat' } position={ 'absolute' } padding={ { base: '7rem 0 0 2rem', md: '9rem 0 0 4rem' } }>
                 <VStack gap={0}>
                     <Circle size={ 5 } bg={ '#804dee' } />
                     <Box width={ 1 } height={ { base: 60, md: '18rem' } } bgGradient={ 'linear(to-b, #804dee 0%, rgba(60, 51, 80, 0) 100%)' }/>
@@ -19,6 +20,7 @@ const Hero = () => {
                     </Text>
                 </VStack>
             </Flex>
+            <Computer />
         </Box>
     );
 }

@@ -30,7 +30,7 @@ const Navigation = ({ routes }: Properties) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <Box bg={ 'gray.900' } px={ 4 } position={ 'fixed' } top={ 0 } width={ 'full' }>
+        <Box bg={ 'gray.900' } px={ 4 } position={ 'fixed' } top={ 0 } width={ 'full' } zIndex={ 1 }>
             <Flex height={ 16 } alignItems={ 'center' } justifyContent={ 'space-between' }>
                 <Box display={ { md: 'none' } } onClick={ isOpen ? onClose : onOpen }>
                     <BiMenuAltLeft size={30} />
