@@ -1,10 +1,11 @@
 import { ReactNode } from 'react';
 
+import Navigation from './Navigation';
+
 /**
  * Properties for the Layout component.
  */
 interface Properties {
-
     // The children components to be rendered within the layout.
     children: ReactNode
 }
@@ -15,7 +16,10 @@ interface Properties {
  */
 const Layout = ({ children }: Properties) => {
     return (
-        { children }
+        <>
+            <Navigation routes={ [ 'About', 'Experience', 'Contact' ] }/>
+            { children }
+        </>
     );
 }
 
