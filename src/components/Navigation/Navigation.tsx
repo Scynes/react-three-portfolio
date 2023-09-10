@@ -1,4 +1,4 @@
-import { Box, Button, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, HStack, IconButton, Image, Stack, Text, useColorMode, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, HStack, Image, Stack, Text, useColorMode, useDisclosure } from '@chakra-ui/react';
 
 import { NavLink } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ const Navigation = ({ routes }: Properties) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <Box bg={ 'gray.900' } px={ 4 }>
+        <Box bg={ 'gray.900' } px={ 4 } position={ 'fixed' } width={ 'full' }>
             <Flex height={ 16 } alignItems={ 'center' } justifyContent={ 'space-between' }>
                 <Box display={ { md: 'none' } } onClick={ isOpen ? onClose : onOpen }>
                     <BiMenuAltLeft size={30} />
@@ -43,10 +43,10 @@ const Navigation = ({ routes }: Properties) => {
                     </HStack>
                 </HStack>
                 <HStack spacing={ '16rem' } alignItems={ 'center' }>
-                    <HStack as={ 'nav' } spacing={ 4 } color={ 'white' } display={ { base: 'none', md: 'flex' } }>
+                    <HStack as={ 'nav' } spacing={ 4 } display={ { base: 'none', md: 'flex' } }>
                         { routes.map(route => (
-                            <Box _hover={ { color: 'red' } }>
-                                <NavLink key={ route } to={ '/' }>
+                            <Box key={ route } _hover={ { color: 'red' } }>
+                                <NavLink to={ '/' }>
                                     { route }
                                 </NavLink>
                             </Box>
