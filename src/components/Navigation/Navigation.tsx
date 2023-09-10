@@ -64,8 +64,8 @@ const Navigation = ({ routes }: Properties) => {
                         <DrawerBody padding={ 0 }>
                             <Stack as={ 'nav' } spacing={ 4 }>
                                 { routes.map(route => (
-                                    <Flex _hover={ { bg: 'red' } } alignItems={ 'center' } justifyContent={ 'center' } padding={ 2.5 }>
-                                        <NavLink key={ route } to={ '/' }>
+                                    <Flex key={ route } _hover={ { bg: 'red' } } alignItems={ 'center' } justifyContent={ 'center' } padding={ 2.5 }>
+                                        <NavLink to={ '/' }>
                                             { route }
                                         </NavLink>
                                     </Flex>
