@@ -6,6 +6,7 @@ import theme from '../chakra/theme';
 
 import Layout from '@components/Layout';
 import Hero from '@components/Hero';
+import About from '@components/About';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
             <Router>
                 <Layout>
                     <Hero />
+                    <About />
                 </Layout>
             </Router>
         </ChakraProvider>

@@ -28,6 +28,7 @@
         "@common/*": ["src/common/*"],
         "@services/*": ["src/services/*"],
         "@hooks/*": ["src/hooks/*"],
+        "@utils/*": ["src/utils/*"],
         "@interfaces/*": ["src/interfaces/*"]
         }
     },
