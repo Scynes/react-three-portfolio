@@ -1,6 +1,6 @@
 import { Box, Card, Center, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 
 interface Service {
     icon: string,
@@ -39,12 +39,12 @@ const About = () => {
             </Text>
             <Flex wrap={ 'wrap' } gap={ '10' } justifyContent={ 'center' }>
             { services.map((service, index) => (
-                <Tilt key={ index }>
+                <Tilt key={ index } scale={1.1} tiltReverse={ true }>
                     <Box padding={ '2px' } rounded={ '2xl' } bgGradient={ 'linear(to-b, #804dee, #0073FF)' }>
                         <Card width={ '14rem' } height={ '17rem' } boxShadow={ 'dark-lg' } rounded={ '2xl' }>
                             <Center height={ 'full' } flexDirection={ 'column' } gap={ '2rem' }>
-                                    <Image src={ `/icons/${service.icon}-icon.png` } />
-                                    <Text fontWeight={ 'bold' } fontSize={ '2xl' } maxW={ '8rem' } textAlign={ 'center' }>{ service.title }</Text>
+                                <Image src={ `/icons/${service.icon}-icon.png` } />
+                                <Text fontWeight={ 'bold' } fontSize={ '2xl' } maxW={ '8rem' } textAlign={ 'center' }>{ service.title }</Text>
                             </Center>
                         </Card>
                     </Box>
