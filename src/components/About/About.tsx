@@ -2,6 +2,8 @@ import { Box, Card, Center, Flex, Heading, Image, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 
+import withSectionWrapper from '@hoc/withSectionWrapper';
+
 interface Service {
     icon: string,
     title: string,
@@ -55,4 +57,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default withSectionWrapper(About, 'm');

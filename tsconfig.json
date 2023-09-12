@@ -29,6 +29,7 @@
         "@services/*": ["src/services/*"],
         "@hooks/*": ["src/hooks/*"],
         "@utils/*": ["src/utils/*"],
+        "@hoc/*": ["src/hoc/*"],
         "@interfaces/*": ["src/interfaces/*"]
         }
     },
