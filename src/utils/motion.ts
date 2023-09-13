@@ -60,7 +60,6 @@ export const fadeIn = (direction: 'left' | 'right' | 'up' | 'down', type: string
                 type,
                 delay,
                 duration,
-                ease: 'easeOut'
             }
         }
     }

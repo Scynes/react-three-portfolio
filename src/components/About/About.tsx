@@ -43,7 +43,7 @@ const About = () => {
                 </Text>
             </Box>
             { services.map((service, index) => (
-                <Box as={ Tilt } width={ 'full' } maxWidth={ { base: 'full', sm: '240px', md: '240px' } } key={ index } scale={1.1} tiltReverse={ true }>
+                <Box as={ Tilt } width={ 'full' } maxWidth={ { base: 'full', sm: '240px', md: '240px' } } key={ index } tiltReverse={ true }>
                     <Box as={ motion.div } variants={ fadeIn('right', 'spring', index * 0.5, 0.75 ) } padding={ '2px' } rounded={ '2xl' } bgGradient={ 'linear(to-b, #804dee, #0073FF)' }>
                         <Card height={ '17rem' } boxShadow={ 'dark-lg' } rounded={ '2xl' }>
                             <Center height={ 'full' } flexDirection={ 'column' } gap={ '2rem' }>
