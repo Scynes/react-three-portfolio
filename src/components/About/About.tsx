@@ -1,9 +1,9 @@
-import { Box, Card, Center, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 
 import withSectionWrapper from '@hoc/withSectionWrapper';
 import { fadeIn, textDrop } from '@utils/motion';
+import Card from './Card';
 
 interface Service {
     icon: string,
@@ -43,16 +43,7 @@ const About = () => {
                 </Text>
             </Box>
             { services.map((service, index) => (
-                <Box as={ Tilt } width={ 'full' } maxWidth={ { base: 'full', sm: '240px', md: '240px' } } key={ index } tiltReverse={ true }>
-                    <Box as={ motion.div } variants={ fadeIn('right', 'spring', index * 0.5, 0.75 ) } padding={ '2px' } rounded={ '2xl' } bgGradient={ 'linear(to-b, #804dee, #0073FF)' }>
-                        <Card height={ '17rem' } boxShadow={ 'dark-lg' } rounded={ '2xl' }>
-                            <Center height={ 'full' } flexDirection={ 'column' } gap={ '2rem' }>
-                                <Image src={ `/icons/${service.icon}-icon.png` } />
-                                <Text fontWeight={ 'bold' } fontSize={ '3xl' } maxW={ '9rem' } textAlign={ 'center' }>{ service.title }</Text>
-                            </Center>
-                        </Card>
-                    </Box>
-                </Box>
+                <Card key={ index } slot={ index } icon={ service.icon } title={ service.title } />
             ))}
         </Flex>
     );
