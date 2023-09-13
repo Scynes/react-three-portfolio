@@ -7,7 +7,7 @@ const withSectionWrapper = ( Component: React.FC, name: string ) => (
     function HOC () {
 
         return (
-            <Box as={ motion.section } variants={ stagger() } initial={ 'hidden' } whileInView={ 'show' } viewport={ { once: true, amount: 0.25 } } marginX={ 'auto' } maxWidth={ '6xl' } paddingX={ '32px' }>
+            <Box as={ motion.section } variants={ stagger() } initial={ 'hidden' } whileInView={ 'show' } viewport={ { once: true, amount: 0.25 } } marginX={ 'auto' } maxWidth={ '6xl' } padding={ '32px' } overflow={ 'hidden' }>
                 <Component />
             </Box>
         )

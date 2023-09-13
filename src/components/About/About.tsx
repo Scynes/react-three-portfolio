@@ -34,12 +34,12 @@ const About = () => {
     return (
         <Flex wrap={ 'wrap' } gap={ '10' }>
             <Box width={ 'full' }>
-                <Box as={ motion.div }>
+                <Box as={ motion.div } variants={ fadeIn('left', 'spring', 0, 0.75 ) }>
                     <Text>INTRODUCTION</Text>
-                    <Heading size={ { base: '2xl', md: '3xl' } }>Overview.</Heading>
+                    <Heading size={ { base: '2xl', md: '3xl' } } marginTop={ '0.5rem' }>Overview.</Heading>
                 </Box>
-                <Text as={ motion.p } variants={ textDrop(0.5) } maxWidth={ '3xl' }>
-                    Hey there! I'm absolutely stoked about coding and I'm on the lookout for a place where I can dive into some serious development action. TypeScript and JavaScript are like music to my ears, though I've also got a solid grasp of Python and Java. When it comes to frameworks, I'm your go-to person for React, SvelteKit, Django, and Node. Let's team up and start turning those brilliant ideas into functional, user-friendly solutions!
+                <Text as={ motion.p } variants={ textDrop(0.5) } maxWidth={ '3xl' } marginTop={ '2rem' }>
+                    Hello! I'm pumped about coding and ready to dive into some serious development work. TypeScript and JavaScript are my jam, but I also have a strong grasp of Python and Java. When it comes to frameworks, I'm your person for React, SvelteKit, Django, and many others. Let's partner up and turn those fantastic ideas into user-friendly solutions!
                 </Text>
             </Box>
             { services.map((service, index) => (
