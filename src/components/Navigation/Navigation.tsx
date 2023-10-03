@@ -1,19 +1,38 @@
-import { Box, Button, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, HStack, Image, Stack, Text, useColorMode, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger } from '@chakra-ui/react';
 
 import { NavLink } from 'react-router-dom';
 
-import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
-import { BiMenuAltLeft } from 'react-icons/bi';
+import { BsBriefcase } from 'react-icons/bs';
+import { BiHistory } from 'react-icons/bi';
+import { FiCompass, FiSmile, FiMail } from 'react-icons/fi';
 
-import Logo from '@assets/logo.svg';
-
-/**
- * Properties for the Navigation component.
- */
-interface Properties {
-    // Represents the routes to be rendered as {@Navlink}'s
-    routes: string[]
-}
+const NAVIGATION_CONTENT = [
+    {
+        name: 'Explore',
+        to: 'explore',
+        icon: <FiCompass />
+    },
+    {
+        name: 'Intro',
+        to: 'intro',
+        icon: <FiSmile />
+    },
+    {
+        name: 'Experience',
+        to: 'experience',
+        icon: <BiHistory />
+    },
+    {
+        name: 'Projects',
+        to: 'projects',
+        icon: <BsBriefcase />
+    },
+    {
+        name: 'Contact',
+        to: 'contact',
+        icon: <FiMail />
+    }
+]
 
 /**
  * The Navigation component of the application. This component adheres to responsive design
@@ -22,60 +41,28 @@ interface Properties {
  * @param param0 
  * @returns 
  */
-const Navigation = ({ routes }: Properties) => {
-    
-    // ChakraUI hook for detecting user selected color mode.
-    const { colorMode, toggleColorMode } = useColorMode();
-    // ChakraUI hook for managing the state of the hamburger menu / drawer
-    const { isOpen, onOpen, onClose } = useDisclosure();
+const Navigation = () => {
 
     return (
-        <Box bg={ 'gray.900' } px={ 4 } position={ 'fixed' } top={ 0 } width={ 'full' } zIndex={ 1 }>
-            <Flex height={ 16 } alignItems={ 'center' } justifyContent={ 'space-between' }>
-                <Box display={ { md: 'none' } } onClick={ isOpen ? onClose : onOpen }>
-                    <BiMenuAltLeft size={30} />
-                </Box>
-                <HStack spacing={ 4 } alignItems={ 'center' }>
-                    <Image boxSize={ 55 } src={ Logo } />
-                    <HStack fontWeight={ 'extrabold' } fontSize={ '1.3rem' }>
-                        <Text>Dustin</Text>
-                        <Text display={ { base: 'none', lg: 'flex' } }>| Full Stack Developer</Text>
-                    </HStack>
-                </HStack>
-                <HStack spacing={ '16rem' } alignItems={ 'center' }>
-                    <HStack as={ 'nav' } spacing={ 4 } display={ { base: 'none', md: 'flex' } }>
-                        { routes.map(route => (
-                            <Box key={ route } _hover={ { color: 'red' } }>
-                                <NavLink to={ '/' }>
-                                    { route }
-                                </NavLink>
-                            </Box>
-                        ))}
-                    </HStack>
-                    <Button onClick={ toggleColorMode } variant={ 'unstyled' }>
-                        { colorMode == 'light' ? <BsFillMoonFill size={ 30 } /> : <BsFillSunFill size={ 30 } /> }
-                    </Button>
-                </HStack>
+        <Flex padding={ 4 } width={ 'full' } justifyContent={ 'center' } position={ 'fixed' } zIndex={ 1 }>
+            <Flex className='nav-bg' backdropFilter={ 'auto' } backdropBlur={ '2px' } _hover={ { transform: 'scale(1.05)' } } transition={ 'ease-in-out' } transitionDuration={ '0.5s' } gap={ '1rem' } alignItems={ 'center' } justifyContent={ 'space-between' } border={ '1px' } borderColor={ 'gray.500' } borderRadius={ 'xl' } padding={ '3' }>     
+                { NAVIGATION_CONTENT.map((item, index) => (
+                    <Box key={ index } as={NavLink} to={ `/#${ item.to }` } borderRadius={'lg'}>
+                        <Popover trigger='hover' >
+                            <PopoverTrigger>
+                                <Box _hover={ { bgColor: 'purple.600' } } transition={ 'ease-in-out' } transitionDuration={ '0.25s' } border={ '1px' } borderColor={ 'gray.500' } borderRadius={ 'lg' } padding={ 3 }>
+                                    { item.icon }
+                                </Box>
+                            </PopoverTrigger>
+                            <PopoverContent width={'min'} marginTop={ '1rem' }>
+                                <PopoverArrow />
+                                <PopoverBody>{ item.name }</PopoverBody>
+                            </PopoverContent>
+                        </Popover>
+                    </Box>
+                )) }
             </Flex>
-            { isOpen &&
-                <Drawer placement={ 'top' } onClose={ onClose } isOpen={ isOpen }>
-                    <DrawerOverlay />
-                    <DrawerContent>
-                        <DrawerBody padding={ 0 }>
-                            <Stack as={ 'nav' } spacing={ 4 }>
-                                { routes.map(route => (
-                                    <Flex key={ route } _hover={ { bg: 'red' } } alignItems={ 'center' } justifyContent={ 'center' } padding={ 2.5 }>
-                                        <NavLink to={ '/' }>
-                                            { route }
-                                        </NavLink>
-                                    </Flex>
-                                ))}
-                            </Stack>
-                        </DrawerBody>
-                    </DrawerContent>
-                </Drawer>
-            }
-        </Box>
+        </Flex>
     );
 }
 

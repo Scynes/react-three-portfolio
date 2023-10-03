@@ -1,9 +1,10 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import withSectionWrapper from '@hoc/withSectionWrapper';
-import { fadeIn, textDrop } from '@utils/motion';
+import { textDrop } from '@utils/motion';
 import Card from './Card';
+import SectionHeading from '@components/SectionHeading';
 
 interface Service {
     icon: string,
@@ -34,10 +35,7 @@ const About = () => {
     return (
         <Flex wrap={ 'wrap' } gap={ '10' }>
             <Box width={ 'full' }>
-                <Box as={ motion.div } variants={ fadeIn('left', 'spring', 0, 0.75 ) }>
-                    <Text>INTRODUCTION</Text>
-                    <Heading size={ { base: '2xl', md: '3xl' } } marginTop={ '0.5rem' }>Overview.</Heading>
-                </Box>
+                <SectionHeading label={ 'INTRODUCTION' } heading={ 'Overview.' } />
                 <Text as={ motion.p } variants={ textDrop(0.5) } maxWidth={ '3xl' } marginTop={ '2rem' }>
                     Hello! I'm pumped about coding and ready to dive into some serious development work. TypeScript and JavaScript are my jam, but I also have a strong grasp of Python and Java. When it comes to frameworks, I'm your person for React, SvelteKit, Django, and many others. Let's partner up and turn those fantastic ideas into user-friendly solutions!
                 </Text>

@@ -17,7 +17,7 @@ interface Properties {
 const Layout = ({ children }: Properties) => {
     return (
         <>
-            <Navigation routes={ [ 'About', 'Experience', 'Contact' ] }/>
+            <Navigation />
             { children }
         </>
     );
