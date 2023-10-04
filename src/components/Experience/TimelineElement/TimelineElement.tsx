@@ -1,12 +1,31 @@
 import { Button, HStack, Heading, ListItem, Tag, Text, UnorderedList } from '@chakra-ui/react';
 import { VerticalTimelineElement, VerticalTimelineElementProps } from 'react-vertical-timeline-component';
 
+import { FaReact } from 'react-icons/fa6';
+import { IoLogoIonic, IoSchool } from 'react-icons/io5';
+import { SiSvelte } from 'react-icons/si';
+import { BsBriefcaseFill } from 'react-icons/bs';
+
 import 'react-vertical-timeline-component/style.min.css';
+import { Link } from 'react-router-dom';
+
+const ICONS: { [ key: string] : JSX.Element } = {
+    react: <FaReact />,
+    ionic: <IoLogoIonic />,
+    svelte: <SiSvelte />,
+    education: <IoSchool />,
+    work: <BsBriefcaseFill />
+}
 
 interface TimelineProperties extends VerticalTimelineElementProps {
 
     // Represents the title of the timeline section.
     title: string
+
+    // Represents the icon name.
+    icon: string
+
+    iconColor: string
 
     // Represents the background color of the icon badge.
     iconBGColor: string
@@ -18,13 +37,16 @@ interface TimelineProperties extends VerticalTimelineElementProps {
     description: string
 
     // Represents the details of the timeline event.
-    details?: string[]
+    details?: string[],
+
+    // Represents the link to the website.
+    link: string
 }
 
-const TimelineElement: React.FC<TimelineProperties> = ({title, technology, iconBGColor, description, details, ...VTProps }) => {
+const TimelineElement: React.FC<TimelineProperties> = ({title, technology, iconColor, iconBGColor, description, details, link, icon, ...VTProps }) => {
     
     return (
-        <VerticalTimelineElement { ...VTProps } iconStyle={ { backgroundColor: iconBGColor } } contentStyle={ { backgroundColor: '#452380' } }>
+        <VerticalTimelineElement { ...VTProps } icon={ ICONS[ icon ] } iconStyle={ { backgroundColor: iconBGColor, color: iconColor } } contentStyle={ { backgroundColor: '#452380' } }>
             <Heading as={ 'h1' } size={ 'xl' } textColor={ 'white' } marginBottom={ '0.5rem' }>{ title }</Heading>
             <HStack wrap={ 'wrap' }>
                 { technology?.map((tech, index) => (
@@ -37,7 +59,9 @@ const TimelineElement: React.FC<TimelineProperties> = ({title, technology, iconB
                     <ListItem key={ index }>{ detail }</ListItem>
                 )) }
             </UnorderedList>
-            <Button colorScheme={ 'purple' } variant={ 'outline' } marginTop={ '1rem' }>Visit Website</Button>
+            <Link to={ link }>
+                <Button colorScheme={ 'purple' } variant={ 'outline' } marginTop={ '1rem' }>Visit Website</Button>
+            </Link>
         </VerticalTimelineElement>
     );
 }
