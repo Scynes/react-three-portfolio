@@ -11,7 +11,9 @@ export default defineConfig({
             '@common': '/src/common',
             '@services': '/src/services',
             '@hooks': '/src/hooks',
-            '@interfaces': '/src/hooks'
+            '@interfaces': '/src/hooks',
+            '@hoc': '/src/hoc',
+            '@utils': '/src/utils'
         },
     },
 })

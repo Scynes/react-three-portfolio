@@ -1,0 +1,131 @@
+[
+    {
+        "title": "TOLO Social",
+        "date": "2023 - Present",
+        "icon": "react",
+        "iconColor": "white",
+        "iconBGColor": "royalblue",
+        "technology": [
+            "React Native",
+            "TypeScript",
+            "Expo",
+            "PostgreSQL",
+            "Supabase"
+        ],
+        "description": "Tap On Lift Off is a dynamic social app tailored for content creators. Features like content decay for non-viral posts and viral boosts for enhanced visibility. All-in-one solution for content sharing, interaction, and maximizing reach.",
+        "link": "https://apps.apple.com/us/app/tolo-social/id1668022575?ign-itscg=30200&ign-itsct=apps_box_badge"
+    },
+    {
+        "title": "Flare",
+        "date": "2022 - Present",
+        "icon": "ionic",
+        "iconColor": "white",
+        "iconBGColor": "slateblue",
+        "technology": [
+            "React",
+            "TypeScript",
+            "Ionic",
+            "Capacitor",
+            "PostgreSQL",
+            "Supabase",
+            "Zustand"
+        ],
+        "description": "Founder and lead developer for Flare, an online dating app for the gamer/nerd demographic.",
+        "link": "https://github.com/Flare-Softworks"
+    },
+    {
+        "title": "New Leaf",
+        "date": "March 2023",
+        "icon": "react",
+        "iconColor": "white",
+        "iconBGColor": "royalblue",
+        "technology": [
+            "React",
+            "Express",
+            "Node",
+            "MongoDB",
+            "TypeScript"
+        ],
+        "description": "1st Place GA Summer hackathon winning project. New Leaf is a mock banking application for managing personal finances by using a number of tools such as a personal finance and expense tracker.",
+        "link": "https://github.com/The-Third-Team/React-Vite-FinancialApp#new-leaf-banking-app"
+    },
+    {
+        "title": "Tech Savvy",
+        "date:": "April 2023",
+        "icon": "svelte",
+        "iconColor": "white",
+        "iconBGColor": "orangered",
+        "technology": [
+            "SvelteKit",
+            "TypeScript",
+            "MongoDB",
+            "Firebase"
+        ],
+        "description": "Developed a technology learning platform based on the prototype given by a Spring hackathon team that had no developers.",
+        "link": "https://techsavvy.herokuapp.com"
+    },
+    {
+        "title": "Navigatedu",
+        "date": "March 2023",
+        "icon": "react",
+        "iconColor": "white",
+        "iconBGColor": "royalblue",
+        "technology": [
+            "React",
+            "Material UI",
+            "MongoDB"
+        ],
+        "description": "3rd Place GA Summer hackathon project. Designed with the topic of 'digital equality and accessibility'. The idea here was to gameify an introduction to the internet and how to navigate it.",
+        "link": "https://navigatedu.netlify.app"
+    },
+    {
+        "title": "General Assembly",
+        "date": "2022 - 2023",
+        "icon": "education",
+        "iconColor": "black",
+        "iconBGColor": "yellow",
+        "technology": [
+            "Python",
+            "JavaScript",
+            "Django",
+            "React",
+            "HTML",
+            "CSS",
+            "Node",
+            "Express"
+        ],
+        "description": "I completed the General Assembly Full Stack Bootcamp, a transformative journey that expanded my technical knowledge and also prepared me to excel in the fast-paced world of software development, setting the stage for a successful career in the field.",
+        "link": "https://www.linkedin.com/feed/update/urn:li:activity:7042535299788210178/"
+    },
+    {
+        "title": "Critical Space Monitor",
+        "date": "2019 - 2022",
+        "icon": "work",
+        "iconColor": "sienna",
+        "iconBGColor": "sandybrown",
+        "technology": [
+            "Wordpress",
+            "Google Cloud",
+            "Excel",
+            "Dropbox"
+        ],
+        "description": "Oversaw and monitored critical space data centers. Deployed technicians for monthly inspections and compiled data gathered for proposals of expansion.",
+        "link": "http://www.cbcriticalsystems.com"
+    },
+    {
+        "title": "System Administrator",
+        "date": "2014 - 2019",
+        "icon": "work",
+        "iconColor": "sienna",
+        "iconBGColor": "sandybrown",
+        "technology": [
+            "Windows",
+            "Linux",
+            "MacOS",
+            "VestaCP",
+            "VMWare"
+        ],
+        "description": "At Dot Com Technologies, I maintained servers, managed networks, enforced robust security measures and partitioned dedicated servers ensuring a reliable and secure IT environment.",
+        "link": "http://dotcomtech.in"
+    }
+]
