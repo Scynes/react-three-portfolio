@@ -9,6 +9,7 @@ import Hero from '@components/Hero';
 import About from '@components/About';
 import Experience from '@components/Experience';
 import Technology from '@components/Technology';
+import Projects from '@components/Projects';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                     <About />
                     <Experience />
                     <Technology />
+                    <Projects />
                 </Layout>
             </Router>
         </ChakraProvider>

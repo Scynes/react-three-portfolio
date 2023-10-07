@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Jet Pack Chuck",
+        "image": "jet-pack-chuck",
+        "technology": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "github": "https://github.com/Scynes/Jet-Pack-Chuck",
+        "demo": "https://scynes.github.io/Jet-Pack-Chuck/",
+        "description": "A Chuck Norris-inspired web game built with vanilla JS/HTML/CSS. It's a Flappy Bird-style adventure featuring custom Chuck Norris assets. After each game, enjoy Chuck Norris jokes fetched from a 3rd-party API."
+    },
+    {
+        "name": "Game Vault",
+        "image": "game-vault",
+        "technology": [
+            "React",
+            "TypeScript",
+            "Chakra UI",
+            "Rawrg.io API"
+        ],
+        "github": "",
+        "demo": "https://game-vault-delta.vercel.app",
+        "description": "Your one-stop destination for exploring, organizing, and discovering an expansive collection of games spanning various genres and platforms. This project is a clone of Rawg.io, aimed at enhancing my skills in React and web development."
+    },
+    {
+        "name": "Brewtiful",
+        "image": "brewtiful",
+        "technology": [
+            "TypeScript",
+            "React",
+            "CSS Modules"
+        ],
+        "github": "https://github.com/Scynes/showcase-coffee-shop-react",
+        "demo": "https://showcase-coffee-shop-react.vercel.app",
+        "description": "A React application showcasing my skills in front-end development. It's designed for an espresso shop, offering a user-friendly experience to explore coffee offerings and place orders with ease."
+    },
+    {
+        "name": "Ghost Upload",
+        "image": "ghost-upload",
+        "technology": [
+            "JavaScript",
+            "NodeJS",
+            "Express",
+            "MongoDB",
+            "HTML",
+            "CSS"
+        ],
+        "github": "https://github.com/Scynes/ghost-upload-express",
+        "demo": "https://ghost.herokuapp.com",
+        "description": "Ghost Upload, is an image uploading and link sharing platform with a strong focus on user privacy. It offers a secure and convenient way to share images and links, ensuring that your data remains confidential."
+    },
+    {
+        "name": "Country Lookup",
+        "image": "country-lookup",
+        "technology": [
+            "SvelteKit",
+            "TypeScript",
+            "Countries API",
+            "HTML",
+            "CSS"
+        ],
+        "github": "https://github.com/Scynes/country-lookup",
+        "demo": "http://country.herokuapp.com",
+        "description": "Built with SvelteKit, it's your gateway to exploring random countries and uncovering intriguing details about them. With data sourced from a country API, users can discover essential information like population, currency, language, and even view the country's flag."
+    },
+    {
+        "name": "Django Paste",
+        "image": "django-paste",
+        "technology": [
+            "Python",
+            "Django",
+            "Whitenoise",
+            "HTML",
+            "CSS",
+            "PostgreSQL",
+            "Supabase"
+        ],
+        "github": "https://github.com/Scynes/django-paste",
+        "demo": "http://django-paste.herokuapp.com",
+        "description": "This is a pastebin type application written in Python using the Django framework. Users can paste text, choose a syntax highlighter and upload/share with various options."
+    },
+    {
+        "name": "React Track",
+        "image": "react-track",
+        "technology": [
+            "React",
+            "TypeScript",
+            "Zustand",
+            "Bootstrap",
+            "CSS"
+        ],
+        "github": "https://github.com/Scynes/expense-tracker",
+        "demo": "https://expense-tracker-kappa-three.vercel.app",
+        "description": "As the name implies, React Track is an expense tracking application built using React. This is a very simple application that was designed to toy with state. as an alternative to TODO apps."
+    }
+]

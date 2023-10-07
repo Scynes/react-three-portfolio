@@ -14,7 +14,7 @@ const Ball = ( { icon }: Properties ) => {
             <ambientLight intensity={ .25 } />
             <directionalLight position={ [ 0, 0, 0.2 ] } />
             <mesh castShadow receiveShadow scale={ 2.75 }>
-                <icosahedronGeometry args={[1, 1]} />
+                <icosahedronGeometry args={[1, 10]} />
                 <meshStandardMaterial color={'#804dee'} />
                 <Decal rotation={ [ 2 * Math.PI, 0, 6.25 ] } position={ [ 0, 0, 1 ] } map={ decal } />
             </mesh>
