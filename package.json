@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@react-three/drei": "^9.83.8",
     "@react-three/fiber": "^8.14.1",
+    "@types/react-router-hash-link": "^2.4.7",
     "@types/react-vertical-timeline-component": "^3.3.4",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
@@ -22,6 +23,7 @@
     "react-icons": "^4.11.0",
     "react-parallax-tilt": "^1.7.166",
     "react-router-dom": "^6.15.0",
+    "react-router-hash-link": "^2.4.3",
     "react-vertical-timeline-component": "^3.6.0"
   },
   "devDependencies": {

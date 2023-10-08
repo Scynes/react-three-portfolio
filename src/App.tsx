@@ -19,8 +19,8 @@ const App = () => {
                     <Hero />
                     <About />
                     <Experience />
-                    <Technology />
                     <Projects />
+                    <Technology />
                 </Layout>
             </Router>
         </ChakraProvider>
