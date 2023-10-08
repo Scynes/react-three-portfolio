@@ -47,4 +47,4 @@ const About = () => {
     );
 }
 
-export default withSectionWrapper(About, 'm');
+export default withSectionWrapper(About, 'about');
