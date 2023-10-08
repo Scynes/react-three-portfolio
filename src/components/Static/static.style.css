@@ -1,0 +1,47 @@
+.static-container {
+    position: fixed;
+    z-index: -2;
+}
+
+.static-background {
+    inset: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url( '/public/images/grain.png' ) repeat 0 0;
+    animation: noise 0.15s infinite;
+    opacity: 0.7;
+}
+
+@keyframes noise {
+
+    0% { 
+        transform: translate(0,0) 
+    }
+    10% { 
+        transform: translate(-5%,-5%) 
+    }
+    20%, 50% { 
+        transform: translate(-10%, 5%) 
+    }
+    30% { 
+        transform: translate(5%,-10%) 
+    }
+    40% { 
+        transform: translate(-5%,15%) 
+    }
+    60% { 
+        transform: translate(15%,0) 
+    }
+    70% { 
+        transform: translate(0,10%) 
+    }
+    80% { 
+        transform: translate(-15%,0) 
+    }
+    90% { 
+        transform: translate(10%,5%) 
+    }
+    100% { 
+        transform: translate(5%,0) 
+    }
+}

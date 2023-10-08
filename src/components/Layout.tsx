@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import Navigation from './Navigation';
+import Static from './Static';
 
 /**
  * Properties for the Layout component.
@@ -17,6 +18,7 @@ interface Properties {
 const Layout = ({ children }: Properties) => {
     return (
         <>
+            <Static />
             <Navigation />
             { children }
         </>
