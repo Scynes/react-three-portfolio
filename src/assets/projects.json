@@ -15,6 +15,7 @@
         "name": "Game Vault",
         "image": "game-vault",
         "technology": [
+            "⭐",
             "React",
             "TypeScript",
             "Chakra UI",
@@ -28,6 +29,7 @@
         "name": "Brewtiful",
         "image": "brewtiful",
         "technology": [
+            "⭐",
             "TypeScript",
             "React",
             "CSS Modules"
@@ -40,12 +42,14 @@
         "name": "Ghost Upload",
         "image": "ghost-upload",
         "technology": [
+            "⭐",
             "JavaScript",
             "NodeJS",
             "Express",
             "MongoDB",
             "HTML",
-            "CSS"
+            "CSS",
+            "Other"
         ],
         "github": "https://github.com/Scynes/ghost-upload-express",
         "demo": "https://ghost.herokuapp.com",
@@ -59,7 +63,8 @@
             "TypeScript",
             "Countries API",
             "HTML",
-            "CSS"
+            "CSS",
+            "Other"
         ],
         "github": "https://github.com/Scynes/country-lookup",
         "demo": "http://country.herokuapp.com",
@@ -75,7 +80,8 @@
             "HTML",
             "CSS",
             "PostgreSQL",
-            "Supabase"
+            "Supabase",
+            "Other"
         ],
         "github": "https://github.com/Scynes/django-paste",
         "demo": "http://django-paste.herokuapp.com",
