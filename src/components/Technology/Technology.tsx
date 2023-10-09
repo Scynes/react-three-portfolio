@@ -30,8 +30,8 @@ const Technology = () => {
             <Flex justifyContent={ 'center' } marginTop={ '3rem' }>
                 <Flex gap={ '2rem' } wrap={ 'wrap' } justifyContent={ 'center' } maxWidth={ '3xl' }>          
                     { TECH.map((tech, index) => (
-                        <Box boxSize={20}>
-                            <Ball key={ index } icon={ tech } />
+                        <Box key={ index } boxSize={20}>
+                            <Ball icon={ tech } />
                         </Box>
                     )) }
                 </Flex>
