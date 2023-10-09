@@ -48,8 +48,8 @@ const Navigation = () => {
         <Flex padding={ 4 } width={ 'full' } justifyContent={ 'center' } position={ 'fixed' } zIndex={ 1 }>
             <Flex className='nav-bg' backdropFilter={ 'auto' } backdropBlur={ '2px' } _hover={ { transform: 'scale(1.05)' } } transition={ 'ease-in-out' } transitionDuration={ '0.5s' } gap={ '1rem' } alignItems={ 'center' } justifyContent={ 'space-between' } border={ '1px' } borderColor={ 'gray.500' } borderRadius={ 'xl' } padding={ '3' }>     
                 { NAVIGATION_CONTENT.map((item, index) => (
-                    <HashLink style={ { cursor: 'pointer' } } to={ `#${ item.to }` }>
-                        <Box cursor={ 'pointer' } key={ index } borderRadius={'lg'}>
+                    <HashLink key={ index } style={ { cursor: 'pointer' } } to={ `#${ item.to }` }>
+                        <Box cursor={ 'pointer' } borderRadius={'lg'}>
                             <Popover trigger='hover' >
                                 <PopoverTrigger>
                                     <Box _hover={ { bgColor: 'purple.600' } } transition={ 'ease-in-out' } transitionDuration={ '0.25s' } border={ '1px' } borderColor={ 'gray.500' } borderRadius={ 'lg' } padding={ 3 }>
